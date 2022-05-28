@@ -1,1 +1,1 @@
-# ProjectManagement-Case-Study
+# Project Management Case Study
