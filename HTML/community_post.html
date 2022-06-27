@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <!--using FontAwesome--------------->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <title>Community</title>
+    <link rel="stylesheet" href="css/community.css">
+    <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="#" class="logo">Letters</a>
+        <div class="toggle"></div>
+        <ul class="navigation">
+            <li><a href="">Home</a></li>
+            <li><a href="">Dicktionary</a></li>
+
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle active" href="posts.php" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Community
+                    </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="">Explore</a>
+                    <a class="dropdown-item" href="">Make a Question</a>
+                </div>
+            </div>
+            <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Join Us
+                    </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="">Sign In</a>
+                    <a class="dropdown-item" href="">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                    </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="">Dashboard</a>
+                    <a class="dropdown-item" href="">User Dashboard</a>
+                    <a class="dropdown-item" href="">Logout</a>
+                </div>
+            </div> -->
+
+        </ul>
+    </header>
+
+    <section class="main_content">
+        <div class="row">
+            <div class="post_view col-8">
+                <!-- Main Posts -->
+
+                <div class="content-post">
+                    <div class="voting_btns">
+                        <!-- FLEX -->
+                        <div class="row"><button class="btn btn-sm"><i class="bi bi-caret-up"></i></button></div>
+                        <div class="row mt-4 ml-4">
+                            <p>0</p>
+                        </div>
+                        <div class="row"><button class="btn btn-sm"><i class="bi bi-caret-down"></i></button></div>
+                    </div>
+
+                    <div class="main_content">
+                        <h3 class="post_title">Title</h3>
+                        <hr class="title_seperator">
+                        <h6>[Topic] Author | Posted at *Time* </h6>
+                        <div class="content_box">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio eum voluptas, nulla dolorem illum consequatur iusto doloremque unde animi autem explicabo, repellendus quibusdam vitae aliquid temporibus officia aut
+                                ab?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments -->
+
+                <div class="comment_section">
+                    <div class="comment">
+                        <div class="voting_btns">
+                            <!-- FLEX -->
+                            <div class="row"><button class="btn btn-sm"><i class="bi bi-caret-up"></i></button></div>
+                            <div class="row mt-4 ml-4">
+                                <p>0</p>
+                            </div>
+                            <div class="row"><button class="btn btn-sm"><i class="bi bi-caret-down"></i></button></div>
+                        </div>
+
+                        <div class="main_content">
+                            <h3 class="commentor">Commentor</h3>
+                            <hr class="title_seperator">
+                            <h6>Posted at *Time*</h6>
+                            <div class="content_box comment_box">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio eum voluptas, nulla dolorem illum consequatur iusto doloremque unde animi autem explicabo, repellendus quibusdam vitae aliquid temporibus officia
+                                    aut ab?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="topic_list other_questions col">
+                <p class="topic_name">Other questions</p>
+                <hr class="topic_list_divider">
+                <div class="list-group">
+                    <a href="community_post.html" class="list-group-item tc">
+                        <p>Why am I sad?</p>
+                    </a>
+                    <a href="community_post.html" class="list-group-item tc">
+                        <p>Why exist only to bring pain?</p>
+                    </a>
+                    <a href="community_post.html" class="list-group-item tc">
+                        <p>How to teach crab to read?</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-2 ">
+
+        <!-- Footer Elements -->
+        <div class="container text-center py-2"> © 2022 Copyright:
+
+            <a href="#"><b class="font-weight-bold">Letters</b></a>
+
+        </div>
+        <!-- Footer Elements -->
+
+    </footer>
+    <!-- Footer -->
+
+    <script src="js/home_page.js"></script>
+    <!-- Script for header -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch6ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
