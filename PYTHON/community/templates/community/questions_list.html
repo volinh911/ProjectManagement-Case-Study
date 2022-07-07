@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block style %}
+    <title>Community</title>
+    <link rel="stylesheet" href="{% static 'styles/community.css' %}">
+{% endblock style %}
+{% block content %}
+    {#    <table>#}
+    {#        {% for question in questions %}#}
+    {#            <tr>#}
+    {#                <td>{{ question.title }}</td>#}
+    {#                <td>{{ question.topic }}</td>#}
+    {#                <td>{{ question.content }}</td>#}
+    {#                <td>{{ question.votePoints }}</td>#}
+    {#                <td>{{ question.date_created }}</td>#}
+    {#                <td><a href="{% url 'question_detail' question.id %}">View</a></td>#}
+    {#                <td><a href="{% url 'question_update' question.id %}">Edit</a></td>#}
+    {#                <td><a href="{% url 'question_delete' question.id %}">Delete</a></td>#}
+    {#            </tr>#}
+    {##}
+    {#        {% endfor %}#}
+    {#    </table>#}
+    {##}
+    {#    <a href="{% url 'question_create' %}">Create</a>#}
+
+    <section class="main_content">
+        <div class="row">
+            <div class="topic_posts col-8">
+
+                <div class="list-group">
+
+                    {% for question in questions %}
+                        <hr class="topic_list_divider">
+                        <a href="{% url 'question_detail' question.id %}" class="list-group-item pc">
+                            <div class="post_card">
+                                <h3>{{ question.title }}</h3>
+                                <p>Topic: {{ question.topic }}</p>
+                                <h6>Author's Name</h6>
+                                <p>{{ question.content }}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <div class="topic_list col">
+                <p class="topic_name">Topics</p>
+                <hr class="topic_list_divider">
+                <div class="list-group">
+                    {% for key,value in topics %}
+                        <a href="" class="list-group-item tc">
+                            <p>{{ value }}</p>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="{% url 'question_create' %}" class="btn btn-yellow"><span class="bi bi-plus"></span></a>
+{% endblock content %}

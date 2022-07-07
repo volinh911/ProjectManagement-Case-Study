@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8338c641-7e30-4afb-a8a4-c0f1156ec37f" name="Changes" comment="" />
+    <list default="true" id="8338c641-7e30-4afb-a8a4-c0f1156ec37f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/community/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/templates/community/question_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/templates/community/question_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/templates/community/question_forms.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/templates/community/questions_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/community/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homepage/templates/homepage/homepage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PYTHON/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PYTHON/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PYTHON/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PYTHON/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +26,13 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -17,19 +40,28 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29nE0dhAUZiq85p0goRa9T4vbbv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "last_opened_file_path": "C:/Users/potat/Documents/GitHub/ProjectManagement-Case-Study/PYTHON/community/templates/community",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\potat\Documents\GitHub\ProjectManagement-Case-Study\PYTHON\community\templates\community" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="PYTHON" type="Python.DjangoServer" factoryName="Django server">
       <module name="PYTHON" />
@@ -64,11 +96,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653740227684</updated>
-      <workItem from="1653740251431" duration="365000" />
+      <workItem from="1653740251431" duration="1016000" />
+      <workItem from="1655722575902" duration="48000" />
+      <workItem from="1655722678103" duration="6092000" />
+      <workItem from="1655768729851" duration="1689000" />
+      <workItem from="1655818248734" duration="180000" />
+      <workItem from="1655818441612" duration="3549000" />
+      <workItem from="1655822155225" duration="1328000" />
+      <workItem from="1655868012766" duration="838000" />
+      <workItem from="1657171351071" duration="33843000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,0 +1,24 @@
+{% load static %}
+<header id="header">
+    <a href="{% url 'home_page' %}" class="logo">Letters</a>
+    <div class="toggle"></div>
+    <ul class="navigation">
+
+        <li><a href="{% url 'home_page' %}" class="active">Home</a></li>
+        <li><a href="">Dictionary</a></li>
+
+        <li><a href="{% url 'questions_list' %}">Community</a></li>
+
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Join Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="">Sign In</a>
+                <a class="dropdown-item" href="">Sign Up</a>
+            </div>
+        </div>
+
+    </ul>
+</header>

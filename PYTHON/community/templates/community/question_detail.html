@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block style %}
+    <title>Community</title>
+    <link rel="stylesheet" href="{% static 'styles/community.css' %}">
+{% endblock style %}
+{% block content %}
+
+    <section class="main_content">
+        <div class="row">
+            <div class="post_view col-8">
+                <!-- Main Posts -->
+
+                <div class="content-post">
+                    <div class="voting_btns">
+                        <!-- FLEX -->
+                        <div class="row">
+                            <button class="btn btn-sm"><i class="bi bi-caret-up"></i></button>
+                        </div>
+                        <div class="row mt-4 ml-4">
+                            <p>0</p>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-sm"><i class="bi bi-caret-down"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="main_content">
+                        <h3 class="post_title">{{ question.title }}</h3>
+                        <hr class="title_seperator">
+                        <h6>[Topic] Author | Posted at {{ question.date_created }} </h6>
+                        <div class="content_box">
+                            <p>
+                                {{ question.content }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments -->
+
+                <div class="comment_section">
+                    <div class="comment">
+                        <div class="voting_btns">
+                            <!-- FLEX -->
+                            <div class="row">
+                                <button class="btn btn-sm"><i class="bi bi-caret-up"></i></button>
+                            </div>
+                            <div class="row mt-4 ml-4">
+                                <p>0</p>
+                            </div>
+                            <div class="row">
+                                <button class="btn btn-sm"><i class="bi bi-caret-down"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="main_content">
+                            <h3 class="commentor">Commentor</h3>
+                            <hr class="title_seperator">
+                            <h6>Posted at *Time*</h6>
+                            <div class="content_box comment_box">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio eum
+                                    voluptas, nulla dolorem illum consequatur iusto doloremque unde animi autem
+                                    explicabo, repellendus quibusdam vitae aliquid temporibus officia
+                                    aut ab?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="topic_list other_questions col">
+                <p class="topic_name">Other questions</p>
+                <hr class="topic_list_divider">
+                <div class="list-group">
+                    <a href="community_post.html" class="list-group-item tc">
+                        <p>Why am I sad?</p>
+                    </a>
+                    <a href="community_post.html" class="list-group-item tc">
+                        <p>Why exist only to bring pain?</p>
+                    </a>
+                    <a href="community_post.html" class="list-group-item tc">
+                        <p>How to teach crab to read?</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}
