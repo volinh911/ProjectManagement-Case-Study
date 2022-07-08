@@ -2,21 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8338c641-7e30-4afb-a8a4-c0f1156ec37f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/community/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community/templates/community/question_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community/templates/community/question_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community/templates/community/question_forms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community/templates/community/questions_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/community/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homepage/templates/homepage/homepage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PYTHON/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PYTHON/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PYTHON/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PYTHON/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/question_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/questions_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/questions_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -49,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -105,6 +109,7 @@
       <workItem from="1655822155225" duration="1328000" />
       <workItem from="1655868012766" duration="838000" />
       <workItem from="1657171351071" duration="33843000" />
+      <workItem from="1657247880586" duration="3673000" />
     </task>
     <servers />
   </component>
@@ -121,5 +126,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

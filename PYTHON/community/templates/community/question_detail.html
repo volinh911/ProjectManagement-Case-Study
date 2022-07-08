@@ -28,7 +28,7 @@
                     <div class="main_content">
                         <h3 class="post_title">{{ question.title }}</h3>
                         <hr class="title_seperator">
-                        <h6>[Topic] Author | Posted at {{ question.date_created }} </h6>
+                        <h6>[{{ question.topic }}] {{ question.owner }} | Posted at {{ question.date_created }} </h6>
                         <div class="content_box">
                             <p>
                                 {{ question.content }}

@@ -7,7 +7,7 @@ from .models import Question
 class QuestionForm(ModelForm):
     class Meta:
         model = Question
-        fields = ['title', 'topic', 'content', ]
+        fields = ['title', 'topic', 'content', 'owner']
         widgets = {
 
         }
