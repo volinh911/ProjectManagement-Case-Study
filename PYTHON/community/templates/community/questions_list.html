@@ -58,5 +58,7 @@
         </div>
     </section>
 
+    {% if request.user.is_authenticated %}
     <a href="{% url 'question_create' %}" class="btn btn-yellow"><span class="bi bi-plus"></span></a>
+    {% endif %}
 {% endblock content %}

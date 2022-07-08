@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from .forms import QuestionForm
@@ -23,6 +24,7 @@ def question_detail(request, pk):
     return render(request, 'community/question_detail.html', {'question': question})
 
 
+@login_required(login_url='login')
 def question_create(request):
     form = QuestionForm()
     if request.method == 'POST':
@@ -35,6 +37,7 @@ def question_create(request):
     return render(request, 'community/question_forms.html', context)
 
 
+@login_required(login_url='login')
 def question_update(request, pk):
     question = Question.objects.get(id=pk)
     form = QuestionForm(instance=question)
@@ -48,6 +51,7 @@ def question_update(request, pk):
     return render(request, 'community/question_forms.html', context)
 
 
+@login_required(login_url='login')
 def question_delete(request, pk):
     question = Question.objects.get(id=pk)
     if request.method == "POST":
