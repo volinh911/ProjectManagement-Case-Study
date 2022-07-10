@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    height: 100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    color: #2b1055;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: none;
+    letter-spacing: 2px;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+    color: #2b1055;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #2b1055;
+    border-radius: 20px;
+    font-weight: 400;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #2b1055;
+    color: #fff;
+}
+
+#dropdownMenuLink {
+    color: #2b1055;
+    text-decoration: none;
+    background-color: transparent !important;
+    box-shadow: none;
+    text-transform: none;
+    font-size: 1em;
+    padding-right: 0;
+}
+
+.dropdown-menu {
+    border-radius: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.dropdown-item {
+    border-radius: 20px;
+}
+
+.dropdown-item:hover {
+    border-radius: 20px;
+    background: #2b1055;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    #header {
+        padding: 20px;
+        background: #2b1055;
+    }
+    #header .logo {
+        font-size: 1.5em;
+        color: #fff;
+    }
+    #header .navigation {
+        display: none;
+    }
+    #header .navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background: #2b1055;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header ul li a {
+        color: #fff;
+    }
+    header ul li a:hover,
+    header ul li a.active {
+        background: #fff;
+        color: #2b1055;
+    }
+    #dropdownMenuLink {
+        font-size: 1.2em;
+        color: #fff;
+    }
+    #header .navigation li {
+        margin-left: 0;
+    }
+    #header .navigation li a {
+        font-size: 1.2em;
+        margin: 5px 0;
+        border-radius: 30px;
+        display: inline-block;
+    }
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(../images/menu.png);
+        color: #2b1055;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 2000;
+    }
+    .toggle.active {
+        background: url(../images/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .sec {
+        padding: 20px;
+    }
+    .sec h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+/*DONE NAVBAR*/
+
+footer {
+    background: url(../images/stars.png);
+    background-color: #2b1055;
+}
+
+footer i {
+    font-size: 2rem;
+}
