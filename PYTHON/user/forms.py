@@ -1,6 +1,6 @@
-from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
@@ -9,8 +9,5 @@ class CustomUserCreationForm(UserCreationForm):
             'username',
             'email',
             'password1',
-            'password2'
+            'password2',
         ]
-        labels = {
-            'email': "Email",
-        }

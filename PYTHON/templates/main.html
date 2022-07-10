@@ -32,16 +32,18 @@
 <body>
 {% include 'navbar.html' %}
 
-{% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-                {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}{% endif %}
-                {{ message }}
-            </li>
-        {% endfor %}
-    </ul>
-{% endif %}
+{#{% if messages %}#}
+{##}
+{#    {% for message in messages %}#}
+{##}
+{#        <div class="alert alert--{{ message.tags }}"> //error success info#}
+{#            <p class="alert__message">{{ message }}</p>#}
+{#            <button class="alert__close">⨯</button>#}
+{#        </div>#}
+{##}
+{#    {% endfor %}#}
+{##}
+{#{% endif %}#}
 
 {% block content %}
 
@@ -49,4 +51,7 @@
 
 {% include 'footer.html' %}
 </body>
+<script>
+    {% static 'js/app.js' %}
+</script>
 </html>

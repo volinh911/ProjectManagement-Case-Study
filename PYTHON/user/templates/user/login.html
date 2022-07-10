@@ -1,12 +1,45 @@
 {% extends 'main.html' %}
-
+{% load static %}
+{% block style %}
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="{% static 'header-footer/sub_header_footer_styles.css' %}">
+{% endblock style %}
 {% block content %}
 
-    <form action="{% url 'login' %}" method="POST">
-    {% csrf_token %}
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="Login">
-    </form>
-    
+    <div class="l-form">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+
+        <div class="form">
+            <img src="{% static 'images/log.svg' %}" class="form__img" alt="">
+            <form action="{% url 'login' %}" class="form__content" method="POST">
+                {% csrf_token %}
+                <h1 class="form__title">One of us ?</h1>
+                <div class="form__div form__div-one">
+                    <div class="form__icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="form__div-input">
+                        <label for="username" class="form__label"></label>
+                        <input type="text" name="username" class="form__input" placeholder="Username" value="">
+                    </div>
+                </div>
+
+
+                <div class="form__div form__div-one ">
+                    <div class="form__icon">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="password" class="form__label"></label>
+                        <input type="password" name="password" class="form__input" placeholder="Password" value="">
+                    </div>
+                </div>
+                <input type="submit" class="form__button" name="login-btn" value="Login">
+            </form>
+        </div>
+    </div>
+
 {% endblock content %}
