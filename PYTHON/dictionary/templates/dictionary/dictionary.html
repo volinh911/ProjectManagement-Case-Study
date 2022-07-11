@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block style %}
+<title>Dictionary</title>
+<link rel="stylesheet" href="{% static 'styles/dictionary.css' %}">
+{% endblock style %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid" style="background: url({% static 'images/stars.png' %});">
+    <div class="container">
+        <img src="{% static 'images/moon - dicc.png' %}" alt="Moon ">
+        <input type="text" onkeypress="handle(event)" class="word" name="word" placeholder="Search something..."
+               maxlength="50">
+    </div>
+</div>
+
+<div class="the-rest">
+    <div class="result">
+        <h1 id="word" class="word"></h1>
+        <p class="phonetics"></p>
+        <audio class="audio" controls></audio>
+        <p class="meaningheading">Meaning</p>
+        <p class="word-definition"></p>
+        <p class="meaningheading">Synonyms</p>
+        <div class="synonyms"></div>
+    </div>
+
+    <div class="wotd-card">
+        <h4 class="wotd-title">Word Of The Day</h4>
+        <h1 class="wotd">Defenstration</h1>
+        <p>(n)</p>
+        <hr>
+        <h2 id="pronunce">de·​fen·​es·​tra·​tion | \ (ˌ)dē-ˌfe-nə-'strā-shən \</h2>
+        <p>a throwing of a person or thing out of a window</p>
+    </div>
+
+</div>
+<script src="{% static 'js/dictionary.js' %}"></script>
+{% endblock content %}

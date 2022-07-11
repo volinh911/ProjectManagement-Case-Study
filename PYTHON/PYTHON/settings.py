@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'community.apps.CommunityConfig',
     'user.apps.UsersConfig',
+    'dictionary.apps.DictionaryConfig',
 ]
 
 MIDDLEWARE = [
