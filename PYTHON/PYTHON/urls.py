@@ -6,4 +6,5 @@ urlpatterns = [
     path('', include("homepage.urls")),
     path('community/', include("community.urls")),
     path('profile/', include("user.urls")),
+    path('dictionary/', include('dictionary.urls'))
 ]

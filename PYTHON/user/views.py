@@ -1,10 +1,12 @@
+from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from django.contrib import messages
+
 # from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 from .forms import CustomUserCreationForm
+
 
 def loginUser(request):
     if request.user.is_authenticated:
@@ -30,8 +32,9 @@ def loginUser(request):
 
 def logoutUser(request):
     logout(request)
-    messages.error(request, "User was logged out")
+    messages.info(request, "User was logged out")
     return redirect('login')
+
 
 def registerUser(request):
     form = CustomUserCreationForm()
@@ -50,9 +53,12 @@ def registerUser(request):
             return redirect('home_page')
 
         else:
+            context = {'form': form}
             messages.error(request, "An error has occurred during registration")
+            return render(request, 'user/register.html', context)
 
     return render(request, 'user/register.html', context)
+
 
 def profile(request):
     return render(request, 'user/profile.html')

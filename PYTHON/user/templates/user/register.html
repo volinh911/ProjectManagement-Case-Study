@@ -1,11 +1,82 @@
 {% extends 'main.html' %}
-
+{% load static %}
+{% load widget_tweaks %}
+{% block style %}
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="{% static 'header-footer/sub_header_footer_styles.css' %}">
+{% endblock style %}
 {% block content %}
+    <div class="l-form">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
 
-    <form action="{% url 'register' %}" method="POST">
-    {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Register">
-    </form>
+        <div class="form">
+            <img src="{% static 'images/register.svg' %}" class="form__img" alt="">
+            <form action="{% url 'register' %}" class="form__content" method="POST">
+                {% csrf_token %}
+                <h1 class="form__title">New here ?</h1>
+
+                {% if form.errors %}
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{ error|escape }}</strong>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <div class="form__div form__div-one">
+                    <div class="form__icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="form__div-input">
+                        <label for="username" class="form__label"></label>
+                        {% render_field form.username type="text" name="username" class="form__input" placeholder="Username" value="" %}
+                    </div>
+                </div>
+
+                <div class="form__div form__div-one">
+                    <div class="form__icon">
+                        <i class="fa fa-at" aria-hidden="true"></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="email" class="form__label"></label>
+                        {% render_field form.email type="email" name="email" class="form__input" placeholder="Email" value="" %}
+                    </div>
+                </div>
+
+
+                <div class="form__div form__div-one ">
+                    <div class="form__icon">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="password" class="form__label"></label>
+                        {% render_field form.password1 type="password" name="password1" class="form__input" placeholder="Password" value="" %}
+                    </div>
+                </div>
+
+                <div class="form__div form__div-one ">
+                    <div class="form__icon">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <div class="form__div-input">
+                        <label for="password" class="form__label"></label>
+                        {% render_field form.password2 type="password" name="password2" class="form__input" placeholder="Confirm Password" value="" %}
+                    </div>
+                </div>
+
+                <input type="submit" class="form__button" name="login-btn" value="Register">
+            </form>
+        </div>
+    </div>
 
 {% endblock content %}
