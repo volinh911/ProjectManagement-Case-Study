@@ -58,7 +58,7 @@ def registerUser(request):
 
         else:
             context = {'form': form}
-            messages.error(request, "An error has occurred during registration")
+            # messages.error(request, "An error has occurred during registration")
             return render(request, 'user/register.html', context)
 
     return render(request, 'user/register.html', context)

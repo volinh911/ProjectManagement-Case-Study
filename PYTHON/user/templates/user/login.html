@@ -15,6 +15,17 @@
             <img src="{% static 'images/log.svg' %}" class="form__img" alt="">
             <form action="{% url 'login' %}" class="form__content" method="POST">
                 {% csrf_token %}
+
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+
+
+
                 <h1 class="form__title">One of us ?</h1>
                 <div class="form__div form__div-one">
                     <div class="form__icon">

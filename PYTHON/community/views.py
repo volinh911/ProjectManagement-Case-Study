@@ -13,7 +13,12 @@ QUESTION_TOPIC = (
 
 # Create your views here.
 def questions_list(request):
-    questions = Question.objects.all().order_by('-date_created')
+
+    search = ''
+    if request.GET.get('search'):
+        search = request.GET.get('search')
+
+    questions = Question.objects.filter(topic__icontains=search).order_by('-date_created')
     topics = QUESTION_TOPIC
     return render(request, 'community/questions_list.html', {'questions': questions, 'topics': topics})
 
@@ -35,6 +40,9 @@ def question_create(request):
             question.owner = profile
             question.save()
             return redirect('questions_list')
+        else:
+            context = {'form': form}
+            return render(request, 'community/question_forms.html', context)
 
     context = {'form': form}
     return render(request, 'community/question_forms.html', context)
