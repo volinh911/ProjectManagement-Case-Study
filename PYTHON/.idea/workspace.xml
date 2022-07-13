@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8338c641-7e30-4afb-a8a4-c0f1156ec37f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/dashboard_nav.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user/dashboard_manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HTML/dashboard_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../HTML/dashboard_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/question_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/question_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/question_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/question_forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/question_forms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/community.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/community.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="8338c641-7e30-4afb-a8a4-c0f1156ec37f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +100,7 @@
       <workItem from="1657328494654" duration="33000" />
       <workItem from="1657433636948" duration="8198000" />
       <workItem from="1657542743623" duration="4467000" />
-      <workItem from="1657690297845" duration="8555000" />
+      <workItem from="1657690297845" duration="9154000" />
     </task>
     <servers />
   </component>
