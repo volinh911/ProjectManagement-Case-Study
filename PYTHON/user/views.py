@@ -1,5 +1,8 @@
+from profile import Profile
+
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
@@ -30,10 +33,11 @@ def loginUser(request):
     return render(request, 'user/login.html')
 
 
+@login_required(login_url='login')
 def logoutUser(request):
     logout(request)
     messages.info(request, "User was logged out")
-    return redirect('login')
+    return redirect('home_page')
 
 
 def registerUser(request):
@@ -60,5 +64,21 @@ def registerUser(request):
     return render(request, 'user/register.html', context)
 
 
+@login_required(login_url='login')
 def profile(request):
-    return render(request, 'user/profile.html')
+    _profile = request.user.profile
+    questions = _profile.question_set.count()
+    reply = _profile.reply_set.count()
+    votesQuestions = _profile.votequestion_set.count()
+    votesReply = _profile.votereply_set.count()
+    finalVotes = votesQuestions + votesReply
+    context = {'questions': questions, 'reply': reply, 'votes': finalVotes}
+    return render(request, 'user/dashboard.html', context)
+
+
+@login_required(login_url='login')
+def profileManage(request):
+    profile = request.user.profile
+    questions = profile.question_set.all().order_by('-date_created')
+    context = {'questions': questions}
+    return render(request, 'user/dashboard_manage.html', context)

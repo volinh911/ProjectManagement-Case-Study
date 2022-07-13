@@ -1,0 +1,42 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+{% block content %}
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            {#            <div class="search-box">#}
+            {#                <i class="uil uil-search"></i>#}
+            {#                <input type="text" placeholder="Search here...">#}
+            {#            </div>#}
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Overview</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-thumbs-up"></i>
+                        <span class="text">Total Posts</span>
+                        <span class="number">{{ questions }}</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Total Comments</span>
+                        <span class="number">{{ reply }}</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-star"></i>
+                        <span class="text">Total Votes</span>
+                        <span class="number">{{ votes }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock content %}

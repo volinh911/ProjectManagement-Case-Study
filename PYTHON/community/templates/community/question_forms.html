@@ -13,12 +13,13 @@
         <form class="post_creation_form" method="POST">
             {% csrf_token %}
 
-            {#            {% for field in form %}#}
-            {#                <div class="{{ field.label }}">#}
-            {#                    <label for="title">{{ field.label }}</label>#}
-            {#                    {{ field }}#}
-            {#                </div>#}
-            {#            {% endfor %}#}
+{#            {% for field in form %}#}
+{#                <div class="{{ field.label }}">#}
+{#                    <label for="title">{{ field.label }}</label>#}
+{#                    {{ field }}#}
+{#                </div>#}
+{#            {% endfor %}#}
+
             <div class="name">
                 <label for="title" id="title">Title:</label>
                 {% render_field form.title type="textarea" class="post_name" id="post_name" name="post_name" rows="1" cols="50" placeholder="Title..." maxlength="42" %}

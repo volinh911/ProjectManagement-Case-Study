@@ -1,0 +1,59 @@
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+            <!--<img src="images/logo.png" alt="">-->
+        </div>
+
+        <span class="logo_name">Letters</span>
+    </div>
+
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li>
+                <a href="{% url 'profile' %}">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'profile-manage' %}">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Manage</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'questions_list' %}">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Community</span>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'home_page' %}">
+                    <i class="uil uil-home"></i>
+                    <span class="link-name">Home</span>
+                </a>
+            </li>
+
+
+            <ul class="logout-mode">
+                <li>
+                    <a href="{% url 'logout' %}">
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,63 @@
+{% extends 'dashboard.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            {#            <div class="search-box">#}
+            {#                <i class="uil uil-search"></i>#}
+            {#                <input type="text" placeholder="Search here...">#}
+            {#            </div>#}
+
+            <!--<img src="images/profile.jpg" alt="">-->
+        </div>
+
+        <div class="dash-content">
+
+            <div class="overview">
+                {% for question in questions %}
+                <div class="activity">
+                    <div class="title">
+                        <i class="uil uil-clock-three"></i>
+                        <span class="text date">{{ question.date_created }}</span>
+                    </div>
+
+
+
+                    <div class="activity-data">
+                        <div class="data names">
+                            <span class="data-title">Title</span>
+                            <span class="data-list">{{ question.title }}</span>
+                        </div>
+                        <div class="data email">
+                            <span class="data-title">Topic</span>
+                            <span class="data-list">{{ question.topic }}</span>
+                        </div>
+                        <div class="data comments">
+                            <span class="data-title text-center">Date</span>
+                            <span class="data-list text-center">{{ question.date_created }}</span>
+                        </div>
+
+                        <div class="data actions">
+                            <span class="data-title text-center">Actions</span>
+
+                            <span class="data-list">
+                                <a href="{% url 'question_update' question.id %}"><i class="fa fa-pencil"
+                                                                                     aria-hidden="true"></i></a>
+                                <a href="{% url 'question_delete' question.id %}"><i class="fa fa-trash-o ml-3"
+                                                                                     aria-hidden="true"></i></a>
+                                <a href="{% url 'question_detail' question.id %}"><i class="fa fa-play ml-3"
+                                                                                     aria-hidden="true"></i></a>
+                            </span>
+
+                        </div>
+                    </div>
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
