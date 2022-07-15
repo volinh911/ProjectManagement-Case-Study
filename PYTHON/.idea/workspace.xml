@@ -2,13 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8338c641-7e30-4afb-a8a4-c0f1156ec37f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/venv.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/community/templates/community/questions_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/questions_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PYTHON/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PYTHON/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0002_alter_question_votepoints_alter_reply_votepoints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0003_topics_remove_question_topic_question_topic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0004_alter_question_topic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0005_alter_question_topic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0006_remove_question_topic_question_topic_delete_topics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0007_alter_question_votepoints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0008_alter_reply_votepoints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0009_alter_question_topic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0010_alter_question_topic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0011_alter_question_date_created.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0012_alter_question_date_created.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0013_question_owner_reply_owner_votequestion_owner_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/migrations/0014_alter_question_owner_alter_reply_owner_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/community/templates/community/question_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/community/templates/community/question_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/community/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/community/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/migrations/0002_remove_reply_questionid_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/migrations/0002_profile_date_created_profile_email_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/migrations/0003_remove_profile_email_remove_profile_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +136,8 @@
       <workItem from="1657690297845" duration="9154000" />
       <workItem from="1657701918712" duration="132000" />
       <workItem from="1657717901002" duration="6721000" />
+      <workItem from="1657779508673" duration="7314000" />
+      <workItem from="1657882660937" duration="12629000" />
     </task>
     <servers />
   </component>

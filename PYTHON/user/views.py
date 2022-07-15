@@ -1,5 +1,3 @@
-from profile import Profile
-
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
@@ -66,19 +64,31 @@ def registerUser(request):
 
 @login_required(login_url='login')
 def profile(request):
-    _profile = request.user.profile
-    questions = _profile.question_set.count()
-    reply = _profile.reply_set.count()
-    votesQuestions = _profile.votequestion_set.count()
-    votesReply = _profile.votereply_set.count()
-    finalVotes = votesQuestions + votesReply
-    context = {'questions': questions, 'reply': reply, 'votes': finalVotes}
+    user = request.user
+    questions = user.question_set.count()
+    reply = user.reply_set.count()
+    upQuestionVotes, downQuestionVotes = 0, 0
+    upReplyVotes, downReplyVotes = 0, 0
+    questionvote = user.question_set.all()
+    replyvote = user.reply_set.all()
+    for object in questionvote:
+        upQuestionVotes += object.num_vote_up
+        downQuestionVotes += object.num_vote_down
+
+    for object in replyvote:
+        upReplyVotes += object.num_vote_up
+        downReplyVotes += object.num_vote_down
+
+    totalQuestionVotes = upQuestionVotes + downQuestionVotes
+    totalReplyVotes = upReplyVotes + downReplyVotes
+    context = {'questions': questions, 'reply': reply, 'questionVotes': totalQuestionVotes,
+               'replyVotes': totalReplyVotes}
     return render(request, 'user/dashboard.html', context)
 
 
 @login_required(login_url='login')
 def profileManage(request):
-    profile = request.user.profile
-    questions = profile.question_set.all().order_by('-date_created')
+    user = request.user
+    questions = user.question_set.all().order_by('-date_created')
     context = {'questions': questions}
     return render(request, 'user/dashboard_manage.html', context)

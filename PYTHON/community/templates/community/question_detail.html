@@ -1,5 +1,6 @@
 {% extends 'main.html' %}
 {% load static %}
+{% load widget_tweaks %}
 {% block style %}
     <title>Community</title>
     <link rel="stylesheet" href="{% static 'styles/community.css' %}">
@@ -14,21 +15,26 @@
                 <div class="content-post">
                     <div class="voting_btns">
                         <!-- FLEX -->
-                        <div class="row">
-                            <button class="btn btn-sm"><i class="bi bi-caret-up"></i></button>
-                        </div>
-                        <div class="row mt-4 ml-4">
-                            <p>0</p>
-                        </div>
-                        <div class="row">
-                            <button class="btn btn-sm"><i class="bi bi-caret-down"></i></button>
-                        </div>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <button type="submit" name="voteUp" value="up" class="btn btn-sm"><i
+                                        class="bi bi-caret-up"></i></button>
+                            </div>
+                            <div class="row mt-4 ml-4">
+                                <p>{{ question.vote_score }}</p>
+                            </div>
+                            <div class="row">
+                                <button type="submit" name="voteDown" value="down" class="btn btn-sm"><i
+                                        class="bi bi-caret-down"></i></button>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="main_content">
                         <h3 class="post_title">{{ question.title }}</h3>
                         <hr class="title_seperator">
-                        <h6>[{{ question.topic }}] {{ question.owner }} | Posted at {{question.date_created}} </h6>
+                        <h6>[{{ question.topic }}] {{ question.owner }} | Posted at {{ question.date_created }} </h6>
                         <div class="content_box">
                             <p>{{ question.content }}
                             </p>
@@ -37,36 +43,41 @@
                 </div>
 
                 <!-- Comments -->
+                {% for reply in reply %}
+                    <div class="comment_section">
+                        <div class="comment">
+                            <div class="voting_btns">
+                                <!-- FLEX -->
+                                <form action="" method="POST">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <button type="submit" name="voteUpComment" value="{{ reply.id }}" class="btn btn-sm"><i
+                                                class="bi bi-caret-up"></i></button>
+                                    </div>
+                                    <div class="row mt-4 ml-4">
+                                        <p>{{ reply.vote_score }}</p>
+                                    </div>
+                                    <div class="row">
+                                        <button type="submit" name="voteDownComment" value="{{ reply.id }}" class="btn btn-sm"><i
+                                                class="bi bi-caret-down"></i></button>
+                                    </div>
+                                </form>
+                            </div>
 
-                <div class="comment_section">
-                    <div class="comment">
-                        <div class="voting_btns">
-                            <!-- FLEX -->
-                            <div class="row">
-                                <button class="btn btn-sm"><i class="bi bi-caret-up"></i></button>
-                            </div>
-                            <div class="row mt-4 ml-4">
-                                <p>0</p>
-                            </div>
-                            <div class="row">
-                                <button class="btn btn-sm"><i class="bi bi-caret-down"></i></button>
-                            </div>
-                        </div>
+                            <div class="main_content">
 
-                        <div class="main_content">
-                            <h3 class="commentor">Commentor</h3>
-                            <hr class="title_seperator">
-                            <h6>Posted at *Time*</h6>
-                            <div class="content_box comment_box">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi distinctio eum
-                                    voluptas, nulla dolorem illum consequatur iusto doloremque unde animi autem
-                                    explicabo, repellendus quibusdam vitae aliquid temporibus officia
-                                    aut ab?
-                                </p>
+                                <h3 class="commentor">{{ reply.owner.username }}</h3>
+                                <hr class="title_seperator">
+                                <h6>Posted at {{ reply.date_created }}</h6>
+                                <div class="content_box comment_box">
+                                    <p>{{ reply.content }}
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
 
 
                 <button type="button" class="btn btn-primary add-cmt-btn" data-mdb-toggle="modal"
@@ -84,14 +95,14 @@
                                         aria-label="Close"></button>
                             </div>
                             <form action="" method="POST">
+                                {% csrf_token %}
                                 <div class="modal-body">
-                                <textarea name="comment-text" id="comment-text" cols="54" rows="10"
-                                          placeholder="Add comment here..."></textarea>
+                                    {% render_field form.content type="textarea" name="comment-text" id="comment-text" cols="54" rows="10" placeholder="Add comment here..." %}
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close
                                     </button>
-                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </form>
                         </div>
