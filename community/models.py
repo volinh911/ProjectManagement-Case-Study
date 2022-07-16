@@ -3,6 +3,7 @@ import datetime
 from django.contrib.auth.models import User
 from django.db import models
 from vote.models import VoteModel
+from django.utils import timezone
 
 VOTE_TYPE = (
     ('up', 'Up'),
@@ -22,7 +23,7 @@ class Question(VoteModel, models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField(max_length=2000)
     topic = models.CharField(max_length=200, choices=QUESTION_TOPIC, null=False)
-    date_created = models.DateTimeField(default=datetime.datetime.now)
+    date_created = models.DateTimeField(default=timezone.now)
     id = models.AutoField(primary_key=True)
 
     def __str__(self):
@@ -33,7 +34,7 @@ class Reply(VoteModel, models.Model):
     questionID = models.ForeignKey(Question, on_delete=models.CASCADE)
     owner = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
     content = models.TextField(max_length=2000)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateTimeField(default=timezone.now)
     id = models.AutoField(primary_key=True)
 
     def __str__(self):
