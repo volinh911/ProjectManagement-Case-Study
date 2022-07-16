@@ -29,6 +29,23 @@ def question_detail(request, pk):
     userID = request.user.id
     user = request.user
     form = ReplyForm()
+
+    questionCheck = ''
+    if question.votes.exists(userID, action=UP):
+        questionCheck = 'up'
+    elif question.votes.exists(userID, action=DOWN):
+        questionCheck = 'down'
+
+    replyDict = {}
+    for comment in reply:
+        print(comment.id)
+        if comment.votes.exists(userID, action=UP):
+            replyDict[comment.id] = 'up'
+        elif comment.votes.exists(userID, action=DOWN):
+            replyDict[comment.id] = 'down'
+
+    print(replyDict)
+
     if request.method == 'POST':
         if not request.user.is_authenticated:
             return redirect('login')
@@ -77,7 +94,9 @@ def question_detail(request, pk):
                     reply.save()
                     return redirect('question_detail', pk)
 
-    return render(request, 'community/question_detail.html', {'question': question, 'form': form, 'reply': reply})
+    return render(request, 'community/question_detail.html',
+                  {'question': question, 'form': form, 'reply': reply, 'user': user, 'questionCheck': questionCheck,
+                   'replyCheck': replyDict})
 
 
 @login_required(login_url='login')

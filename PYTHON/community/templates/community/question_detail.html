@@ -1,6 +1,7 @@
 {% extends 'main.html' %}
 {% load static %}
 {% load widget_tweaks %}
+{% load custom_tags %}
 {% block style %}
     <title>Community</title>
     <link rel="stylesheet" href="{% static 'styles/community.css' %}">
@@ -18,15 +19,25 @@
                         <form action="" method="POST">
                             {% csrf_token %}
                             <div class="row">
-                                <button type="submit" name="voteUp" value="up" class="btn btn-sm"><i
-                                        class="bi bi-caret-up"></i></button>
+                                {% if questionCheck == 'up' %}
+                                    <button type="submit" name="voteUp" value="up" class="btn btn-sm"><i
+                                            class="bi bi-caret-up" style="color: green"></i></button>
+                                {% else %}
+                                    <button type="submit" name="voteUp" value="up" class="btn btn-sm"><i
+                                            class="bi bi-caret-up"></i></button>
+                                {% endif %}
                             </div>
                             <div class="row mt-4 ml-4">
                                 <p>{{ question.vote_score }}</p>
                             </div>
                             <div class="row">
-                                <button type="submit" name="voteDown" value="down" class="btn btn-sm"><i
-                                        class="bi bi-caret-down"></i></button>
+                                {% if  questionCheck == 'down' %}
+                                    <button type="submit" name="voteDown" value="down" class="btn btn-sm"><i
+                                            class="bi bi-caret-down" style="color: green"></i></button>
+                                {% else %}
+                                    <button type="submit" name="voteDown" value="down" class="btn btn-sm"><i
+                                            class="bi bi-caret-down"></i></button>
+                                {% endif %}
                             </div>
                         </form>
                     </div>
@@ -51,15 +62,29 @@
                                 <form action="" method="POST">
                                     {% csrf_token %}
                                     <div class="row">
-                                        <button type="submit" name="voteUpComment" value="{{ reply.id }}" class="btn btn-sm"><i
-                                                class="bi bi-caret-up"></i></button>
+                                        {% if replyCheck|get_item:reply.id == 'up' %}
+                                            <button type="submit" name="voteUpComment" value="{{ reply.id }}"
+                                                    class="btn btn-sm"><i
+                                                    class="bi bi-caret-up" style="color: green"></i></button>
+                                        {% else %}
+                                            <button type="submit" name="voteUpComment" value="{{ reply.id }}"
+                                                    class="btn btn-sm"><i
+                                                    class="bi bi-caret-up"></i></button>
+                                        {% endif %}
                                     </div>
                                     <div class="row mt-4 ml-4">
                                         <p>{{ reply.vote_score }}</p>
                                     </div>
                                     <div class="row">
-                                        <button type="submit" name="voteDownComment" value="{{ reply.id }}" class="btn btn-sm"><i
-                                                class="bi bi-caret-down"></i></button>
+                                        {% if replyCheck|get_item:reply.id == 'down' %}
+                                            <button type="submit" name="voteDownComment" value="{{ reply.id }}"
+                                                    class="btn btn-sm"><i
+                                                    class="bi bi-caret-down" style="color: green"></i></button>
+                                        {% else %}
+                                            <button type="submit" name="voteDownComment" value="{{ reply.id }}"
+                                                    class="btn btn-sm"><i
+                                                    class="bi bi-caret-down"></i></button>
+                                        {% endif %}
                                     </div>
                                 </form>
                             </div>
