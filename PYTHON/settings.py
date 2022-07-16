@@ -17,6 +17,9 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import homepage.apps
 
+import django_on_heroku
+django_on_heroku.settings(locals())
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
