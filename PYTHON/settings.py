@@ -9,8 +9,10 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
+
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import homepage.apps
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-x(^9l941g!bd5_ly)feq36u#w&&3mn)q3xbh*8su-mim(kebes
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['letters-pm.herokuapp.com/', '100.94.146.64']
 
 # Application definition
 
@@ -83,18 +85,12 @@ WSGI_APPLICATION = 'PYTHON.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+DATABASE_URL = 'postgres://yidttxhvgrcgkh:0b5452c03aafa9045221207b45f7f35b4f0507a68044d3c8bd08adc1b117903b@ec2-63-32-248-14.eu-west-1.compute.amazonaws.com:5432/d4p1h4ubu193nc'
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'letters',
-        'USER': 'postgres',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(),
 }
-
+DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default=DATABASE_URL)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -137,3 +133,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+if os.getcwd() == '/app':
+    DEBUG = False
