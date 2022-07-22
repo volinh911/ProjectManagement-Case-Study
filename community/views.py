@@ -8,7 +8,7 @@ from .models import Question, Reply
 QUESTION_TOPIC = (
     ('English', 'English'),
     ('Mandarin', 'Mandarin'),
-    ('German', 'German'),
+    ('Japanese', 'Japanese'),
 )
 
 
