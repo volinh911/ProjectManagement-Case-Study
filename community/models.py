@@ -15,7 +15,7 @@ VOTE_TYPE = (
 QUESTION_TOPIC = (
     ('English', 'English'),
     ('Mandarin', 'Mandarin'),
-    ('German', 'German'),
+    ('Japanese', 'Japanese'),
 )
 tz = timezone('Asia/Ho_Chi_Minh')
 
