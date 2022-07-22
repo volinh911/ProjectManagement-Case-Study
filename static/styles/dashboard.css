@@ -397,6 +397,7 @@ nav.close~.dashboard .top {
     display: flex;
     flex-direction: column;
     margin: 0 15px;
+    width: 100px;
 }
 
 .activity-data .data-title {
