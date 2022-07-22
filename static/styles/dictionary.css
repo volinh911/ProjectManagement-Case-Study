@@ -91,7 +91,6 @@ header ul li a.active {
 .jumbotron.jumbotron-fluid {
     mix-blend-mode: lighten;
     height: 25rem;
-    margin-top: 10%;
     display: flex;
 }
 
